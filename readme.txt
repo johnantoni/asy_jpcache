@@ -2,6 +2,16 @@ asy_jpcache is Full Page Caching for Textpattern1.0 rev.300 and up (including RC
 
 Install asy_jpcache.txt in the Admin-Panel, and click on _help_ to view the installation instructions.
 
+Installation
+----------------
+
+1. Copy the directory jpcache and its contents into your main directory. It should be right next to your images and your textpattern directory (on a default install).
+Make sure that the jpcache/cache directory can be written to. Usually chmod 777 jpcache/cache/ will do the trick.
+2. Edit your index.php in the main directory and before include txpath.'/publish.php'; insert the following line: include './jpcache/jpcache.php'; (IMPORTANT: do NOT edit textpattern/index.php )
+3. Don’t forget to activate this Admin-plugin.
+4. Optional: Look inside jpcache/jpcache-config.php to change a few settings, like enabling Debugging, permanently turning off gzip-encoding, change timout etc.
+
+
 Version History
 ----------------
 - Merge Adam Messinger's aam_zcr_clearcache plugin to allow co-operation with ZCR.
